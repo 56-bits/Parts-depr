@@ -6,18 +6,11 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-<<<<<<< HEAD
     <sprite>sprites\spr_baldman</sprite>
-=======
-    <sprite>sprites\sprite0</sprite>
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> origin/Improved-Sprites
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <rooms name="rooms"/>
   <help>
     <rtf>help.rtf</rtf>
   </help>
