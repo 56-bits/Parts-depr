@@ -10,7 +10,11 @@
     <sprite>sprites\spr_baldman</sprite>
 =======
     <sprite>sprites\sprite0</sprite>
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> refs/remotes/origin/master
+>>>>>>> origin/Improved-Sprites
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
