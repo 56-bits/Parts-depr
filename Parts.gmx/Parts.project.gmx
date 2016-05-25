@@ -10,6 +10,7 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <rooms name="rooms"/>
   <help>
     <rtf>help.rtf</rtf>
   </help>
