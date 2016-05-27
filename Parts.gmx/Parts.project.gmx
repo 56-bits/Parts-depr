@@ -7,10 +7,33 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_baldman</sprite>
+    <sprite>sprites\spr_ground</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <rooms name="rooms"/>
+  <scripts name="scripts">
+    <scripts name="grp_player">
+      <scripts name="grp_player_state_machine">
+        <script>scripts\scr_pSM.gml</script>
+        <script>scripts\scr_pwalk.gml</script>
+        <script>scripts\scr_pstand.gml</script>
+        <script>scripts\scr_pair.gml</script>
+      </scripts>
+      <scripts name="grp_player_checks">
+        <script>scripts\scr_pchecks.gml</script>
+        <script>scripts\scr_pkeys.gml</script>
+      </scripts>
+      <script>scripts\scr_collisions.gml</script>
+    </scripts>
+  </scripts>
+  <objects name="objects">
+    <object>objects\obj_player</object>
+    <object>objects\par_collidable</object>
+    <object>objects\obj_ground</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_test</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
