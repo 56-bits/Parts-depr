@@ -25,8 +25,26 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///creation
-image_alpha = 1;
+            <string>///Init variables
+
+enum states
+{
+    stand,
+    walk
+};
+
+states = states.stand
+
+//-movement variables
+vspd = 0;
+hspd = 0;
+
+//jumping
+jspd = 10;
+
+//walking
+wspd = 4;
+
 </string>
           </argument>
         </arguments>
@@ -49,11 +67,49 @@ image_alpha = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///code for stepsing
-for (i=0; i&lt;6; i+=1)
+            <string>///step stuff
+
+//perform the nessesary checks
+scr_pchecks();
+
+//use the player's state machine
+scr_pSM();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+
+if states == states.stand
 {
-    player_SM();
-};
+    draw_text(20,20, "stand")
+}
+
+if states == states.walk
+{
+    draw_text(20,20, "walk")
+}
+
+
 
 </string>
           </argument>

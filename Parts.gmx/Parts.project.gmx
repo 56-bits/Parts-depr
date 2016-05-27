@@ -11,7 +11,17 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\player_SM.gml</script>
+    <scripts name="grp_player">
+      <scripts name="grp_player_state_machine">
+        <script>scripts\scr_pSM.gml</script>
+        <script>scripts\scr_pwalk.gml</script>
+        <script>scripts\scr_pstand.gml</script>
+      </scripts>
+      <scripts name="grp_player_checks">
+        <script>scripts\scr_pchecks.gml</script>
+        <script>scripts\scr_pkeys.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
