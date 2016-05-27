@@ -9,7 +9,7 @@ if !( moveing )
 
 var move = mright + -mleft; //movement direction
 
-hspd = move * wspd; //put movement in hspd
+hspd = move * wspd * (shift * rspd + 1); //put movement in hspd // also applies the run stuff
 
 //verticle move code
 

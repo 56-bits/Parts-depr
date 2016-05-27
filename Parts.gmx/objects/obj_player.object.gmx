@@ -50,6 +50,9 @@ wspd = 4;
 
 //air control
 aspd = .07
+
+//run multiplier;
+rspd = 1; //percent increase
 </string>
           </argument>
         </arguments>
