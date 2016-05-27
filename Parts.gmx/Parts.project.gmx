@@ -10,6 +10,9 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\player_SM.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
   </objects>
