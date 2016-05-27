@@ -30,7 +30,8 @@
 enum states
 {
     stand,
-    walk
+    walk,
+    air
 };
 
 states = states.stand
@@ -38,6 +39,8 @@ states = states.stand
 //-movement variables
 vspd = 0;
 hspd = 0;
+grav = .6;
+tvel = 15;
 
 //jumping
 jspd = 10;
@@ -45,6 +48,8 @@ jspd = 10;
 //walking
 wspd = 4;
 
+//air control
+aspd = .07
 </string>
           </argument>
         </arguments>
@@ -109,7 +114,10 @@ if states == states.walk
     draw_text(20,20, "walk")
 }
 
-
+if states == states.air
+{
+    draw_text(20,20, "air")
+}
 
 </string>
           </argument>
