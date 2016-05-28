@@ -50,6 +50,7 @@ wspd = 4;
 
 //air control
 aspd = .07
+fspd = 1; //percent increase in fall speed
 
 //run multiplier;
 rspd = 1; //percent increase

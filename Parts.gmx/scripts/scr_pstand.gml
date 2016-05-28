@@ -1,4 +1,10 @@
 
+
+if place_meeting(x, y + 1, par_collidable) //only jump when on floor
+{
+    vspd = jump * -jspd //do the jump
+}
+
 //if any of the movement keys are pressed, switch to the walk state
 if ( moveing )
 {
@@ -10,4 +16,6 @@ if !place_meeting(x, y + vspd + 1, par_collidable)
 {
     states = states.air
 }
+
+
 

@@ -5,7 +5,10 @@ if place_meeting(x, y + vspd + 1, par_collidable)
     states = states.walk
 }
 
-if vspd < tvel then vspd += grav; //allow accelleration to terminal velocity
+if vspd < tvel
+{
+    vspd += grav  * (mdown * fspd + 1); //allow accelleration to terminal velocity // accelerate w/ down key
+}
 
 move = mright - mleft;
 
