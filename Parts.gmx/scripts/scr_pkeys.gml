@@ -3,7 +3,9 @@
 //check for movement
 mright = keyboard_check(ord("D")) || keyboard_check(vk_right);
 mleft  = keyboard_check(ord("A")) || keyboard_check(vk_left);
-jump   = keyboard_check(vk_space);
+mdown  = keyboard_check(ord("S")) || keyboard_check(vk_down);
+jump   = keyboard_check_pressed(vk_space);
+jumping = keyboard_check(vk_space);
 
 shift = keyboard_check(vk_lshift);
 

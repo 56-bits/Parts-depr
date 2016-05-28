@@ -9,13 +9,19 @@ if !( moveing )
 
 var move = mright + -mleft; //movement direction
 
-hspd = move * wspd * (shift * rspd + 1); //put movement in hspd // also applies the run stuff
+hspd = move * wspd * (shift * rspd + 1) * fmspd; //put movement in hspd // also applies the run stuff //mechanic for mouse facing
+
+
+if jumping && alarm[0] != -1
+{
+    hspd *= 2;
+}
 
 //verticle move code
 
 if vspd < tvel then vspd += grav; //allow accelleration to terminal velocity
 
-if place_meeting(x, y + 1, par_collidable) //only jump when on floor
+if place_meeting(x, y + 1, par_collidable) && alarm[0] = -1 //only jump when on floor
 {
     vspd = jump * -jspd //do the jump
 }
