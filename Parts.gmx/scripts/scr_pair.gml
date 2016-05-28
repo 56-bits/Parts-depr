@@ -2,6 +2,7 @@
 
 if place_meeting(x, y + vspd + 1, par_collidable)
 {
+    alarm[0] = 10;
     states = states.walk
 }
 
@@ -13,6 +14,11 @@ if vspd < tvel
 move = mright - mleft;
 
 hspd += move * aspd * fmspd;
+
+if jumping && vspd < 0 //jump boost
+{
+    vspd -= jbst;
+}
 
 scr_collisions(); //collisons
 
