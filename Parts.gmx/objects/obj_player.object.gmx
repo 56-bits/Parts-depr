@@ -54,6 +54,11 @@ fspd = 1; //percent increase in fall speed
 
 //run multiplier;
 rspd = 1; //percent increase
+
+//face mouse speed
+fmspd = 0;
+nfmspd = .5;
+isfmspd = 1;
 </string>
           </argument>
         </arguments>

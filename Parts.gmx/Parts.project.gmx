@@ -22,6 +22,7 @@
       <scripts name="grp_player_checks">
         <script>scripts\scr_pchecks.gml</script>
         <script>scripts\scr_pkeys.gml</script>
+        <script>scripts\scr_facemouse.gml</script>
       </scripts>
       <script>scripts\scr_collisions.gml</script>
     </scripts>

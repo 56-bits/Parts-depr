@@ -12,7 +12,7 @@ if vspd < tvel
 
 move = mright - mleft;
 
-hspd += move * aspd;
+hspd += move * aspd * fmspd;
 
 scr_collisions(); //collisons
 
