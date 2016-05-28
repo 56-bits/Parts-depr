@@ -49,7 +49,7 @@ jspd = 10;
 wspd = 4;
 
 //air control
-aspd = .07
+aspd = .55
 
 //run multiplier;
 rspd = 1; //percent increase
