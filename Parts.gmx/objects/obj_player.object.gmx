@@ -50,7 +50,7 @@ jbst = .3;
 wspd = 4;
 
 //air control
-aspd = .07
+aspd = .55;
 fspd = 1; //percent increase in fall speed
 
 //run multiplier;
