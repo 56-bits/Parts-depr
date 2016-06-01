@@ -28,13 +28,14 @@
             <string>///Init variables
 
 //sprite stuff
-ispd = 0.2;
-rispd = 0.3;
-body = 0;
-body_index = spr_player_body_0_idle;
-shirt = 0;
-shirt_index = spr_player_shirt_0_idle;
+ispd = 0.2; //image speed (normal)
+rispd = 0.3; //image_speed (running)
+body = 0; //starting body number (identification)
+body_index = 0; //body sprite storage
+shirt = 0; //starting shirt index
+shirt_index = 0; //shirt sprite storage
 
+//staet machine
 enum states
 {
     stand,
@@ -42,55 +43,31 @@ enum states
     air
 };
 
-states = states.stand
+states = states.stand //staring state
 
 //-movement variables
-vspd = 0;
-hspd = 0;
-grav = .6;
-tvel = 15;
+vspd = 0; //verticle speed storage
+hspd = 0; //horizontal speed storage
+grav = .6; //gravity
+tvel = 15; //terminal velocity
 
 //jumping
-jspd = 10;
-jbst = .3;
+jspd = 5; //standard jump
+jbst = .15; //variable jump height
 
 //walking
-wspd = 4;
+wspd = 3; //normal walk speed
 
 //air control
-aspd = .55;
-fspd = 1; //percent increase in fall speed
+aspd = .3; //air control speed
+fspd = .3; //percent increase in fall speed (down key)
 
 //run multiplier;
 rspd = 1; //percent increase
 
 //face mouse speed
-fmspd = 0;
-nfmspd = .5; //is not facing the mouse
-isfmspd = 1; //is facing the mouse
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///for landing boost
+nfmspd = .5; //percentage decrease when moving away from mouse
+
 </string>
           </argument>
         </arguments>

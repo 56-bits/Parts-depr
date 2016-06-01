@@ -10,6 +10,8 @@ if place_meeting(x + hspd, y, par_collidable)
     hspd = 0;
 }
 
+x += hspd
+
 //verticle collision
 
 if place_meeting(x, y + vspd, par_collidable)
@@ -20,4 +22,6 @@ if place_meeting(x, y + vspd, par_collidable)
     }
     vspd = 0;
 }
+
+y += vspd
 
