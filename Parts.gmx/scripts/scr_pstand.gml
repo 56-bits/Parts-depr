@@ -1,4 +1,5 @@
 
+scr_sprite_idle();
 
 if place_meeting(x, y + 1, par_collidable) //only jump when on floor
 {

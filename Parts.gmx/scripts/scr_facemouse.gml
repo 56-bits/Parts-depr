@@ -6,10 +6,12 @@ if mouse_x < x
     if hspd < 0
     {
         fmspd = isfmspd;
+        image_speed = ispd + shift * rispd ;
     }
     else
     {
         fmspd = nfmspd;
+        image_speed = -(ispd + shift * rispd) * nfmspd;
     }
 }
 else
@@ -19,9 +21,11 @@ else
     if hspd > 0
     {
         fmspd = isfmspd;
+        image_speed = ispd + shift * rispd;
     }
     else
     {
         fmspd = nfmspd;
+        image_speed = -(ispd + shift * rispd) * nfmspd;
     }
 }

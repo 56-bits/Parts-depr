@@ -1,4 +1,6 @@
 
+scr_sprite_walk();
+
 //if none of the movement keys are pressed, go to the stand state
 if !( moveing )
 {
