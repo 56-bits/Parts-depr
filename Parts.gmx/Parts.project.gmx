@@ -8,6 +8,28 @@
   <sprites name="sprites">
     <sprite>sprites\spr_baldman</sprite>
     <sprite>sprites\spr_ground</sprite>
+    <sprites name="grp_player">
+      <sprites name="grp_player_body">
+        <sprites name="grp_player_body_idle">
+          <sprite>sprites\spr_player_body_0_idle</sprite>
+          <sprite>sprites\spr_player_body_1_idle</sprite>
+        </sprites>
+        <sprites name="grp_plsyer_body_walk">
+          <sprite>sprites\spr_player_body_0_walk</sprite>
+          <sprite>sprites\spr_player_body_1_walk</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="grp_player_shirt">
+        <sprites name="grp_player_shirt_idle">
+          <sprite>sprites\spr_player_shirt_0_idle</sprite>
+          <sprite>sprites\spr_player_shirt_1_idle</sprite>
+        </sprites>
+        <sprites name="grp_player_shirt_walk">
+          <sprite>sprites\spr_player_shirt_0_walk</sprite>
+          <sprite>sprites\spr_player_shirt_1_walk</sprite>
+        </sprites>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -25,6 +47,11 @@
         <script>scripts\scr_facemouse.gml</script>
       </scripts>
       <script>scripts\scr_collisions.gml</script>
+      <scripts name="grp_player_spritesuff">
+        <script>scripts\scr_sprite_idle.gml</script>
+        <script>scripts\scr_sprite_walk.gml</script>
+        <script>scripts\scr_draw_self.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
