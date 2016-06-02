@@ -32,5 +32,16 @@ if jumping && vspd < 0 //jump boost
     vspd -= jbst;
 }
 
-scr_collisions(); //collisons and move,ent application
+//air speed limits
+if hspd > wspd * (1 + rspd)
+{
+    hspd = wspd * (1 + rspd)
+}
+if hspd < -wspd * (1 + rspd)
+{
+    hspd = -wspd * (1 + rspd)
+}
+
+
+scr_collisions(); //collisons and move ant application
 

@@ -28,8 +28,9 @@
             <string>///Init variables
 
 //sprite stuff
-ispd = 0.2; //image speed (normal)
-rispd = 0.3; //image_speed (running)
+ispd = 0.3; //image speed (normal)
+rispd = 0.4; //image_speed (running)
+
 body = 0; //starting body number (identification)
 body_index = 0; //body sprite storage
 shirt = 0; //starting shirt index
@@ -52,8 +53,8 @@ grav = .6; //gravity
 tvel = 15; //terminal velocity
 
 //jumping
-jspd = 5; //standard jump
-jbst = .15; //variable jump height
+jspd = 4; //standard jump
+jbst = .2; //variable jump height
 
 //walking
 wspd = 3; //normal walk speed
@@ -66,7 +67,7 @@ fspd = .3; //percent increase in fall speed (down key)
 rspd = 1; //percent increase
 
 //face mouse speed
-nfmspd = .5; //percentage decrease when moving away from mouse
+nfmspd = .7; //percentage of speed when moving away from mouse
 
 </string>
           </argument>
@@ -98,6 +99,30 @@ scr_pchecks();
 //use the player's state machine
 scr_pSM();
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>body = irandom(1);
+shirt = irandom(1);
 </string>
           </argument>
         </arguments>

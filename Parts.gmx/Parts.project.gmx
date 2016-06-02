@@ -12,17 +12,21 @@
       <sprites name="grp_player_body">
         <sprites name="grp_player_body_idle">
           <sprite>sprites\spr_player_body_0_idle</sprite>
+          <sprite>sprites\spr_player_body_1_idle</sprite>
         </sprites>
         <sprites name="grp_plsyer_body_walk">
           <sprite>sprites\spr_player_body_0_walk</sprite>
+          <sprite>sprites\spr_player_body_1_walk</sprite>
         </sprites>
       </sprites>
       <sprites name="grp_player_shirt">
         <sprites name="grp_player_shirt_idle">
           <sprite>sprites\spr_player_shirt_0_idle</sprite>
+          <sprite>sprites\spr_player_shirt_1_idle</sprite>
         </sprites>
         <sprites name="grp_player_shirt_walk">
           <sprite>sprites\spr_player_shirt_0_walk</sprite>
+          <sprite>sprites\spr_player_shirt_1_walk</sprite>
         </sprites>
       </sprites>
     </sprites>
