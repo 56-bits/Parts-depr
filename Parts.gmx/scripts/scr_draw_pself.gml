@@ -1,4 +1,3 @@
-/*
 //set image speed
 if shift 
 {
@@ -26,7 +25,7 @@ else
         image_speed = -image_speed * nfmspd
     }
 }
-*/
+
 
 //draw the body
 draw_sprite_ext(body_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha); 
