@@ -35,7 +35,6 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_no_mask</sprite>
-    <sprite>sprites\spr_bullet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -67,18 +66,7 @@
       </scripts>
       <script>scripts\scr_collisions.gml</script>
     </scripts>
-    <scripts name="grp_npc">
-      <scripts name="grp_npc_state_machine">
-        <script>scripts\scr_nSM.gml</script>
-        <script>scripts\scr_nstand.gml</script>
-        <script>scripts\scr_nwalk.gml</script>
-        <script>scripts\scr_nair.gml</script>
-      </scripts>
-    </scripts>
   </scripts>
-  <fonts name="fonts">
-    <font>fonts\fnt</font>
-  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_phands</object>
@@ -91,7 +79,6 @@
       <object>objects\par_collidable</object>
       <object>objects\obj_ground</object>
     </objects>
-    <object>objects\obj_bullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
