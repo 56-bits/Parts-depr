@@ -25,11 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>body = irandom(1);
-shirt = irandom(1);
+            <string>///Init variables
 
-ispd = 0.3; //image_speed
+instance_create(x,y,obj_phands);
+
+//sprite stuff
+ispd = 0.3; //image speed (normal)
 rispd = 0.4; //image_speed (running)
+
+body = irandom(1); //starting body number (identification)
+body_index = 0; //body sprite storage
+shirt = irandom(1); //starting shirt index
+shirt_index = 0; //shirt sprite storage
 
 //staet machine
 enum nstates
@@ -39,13 +46,55 @@ enum nstates
     air
 };
 
-nstates = nstates.stand
+nstates = nstates.stand //staring state
 
-hspd = 0;
+//-movement variables
+vspd = 0; //verticle speed storage
+hspd = 0; //horizontal speed storage
+grav = .6; //gravity
+tvel = 15; //terminal velocity
+move = 1; //movement direction
 
-shift = false;
+//jumping
+jspd = 4.5; //standard jump
+//jbst = .2; //variable jump height
 
-scr_sprite_idle();
+//walking
+wspd = 3; //normal walk speed
+
+//air control
+aspd = .3; //air control speed
+//fspd = .3; //percent increase in fall speed (down key)
+
+//run multiplier;
+rspd = 1; //percent increase
+
+//face mouse speed
+//nfmspd = .7; //percentage of speed when moving away from mouse
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_nSM();
 </string>
           </argument>
         </arguments>
@@ -94,6 +143,23 @@ shirt = irandom(1);
             <kind>1</kind>
             <string>scr_sprite_idle();
 scr_draw_self();
+
+
+if nstates == nstates.stand
+{
+    draw_text(x - 20, y - 35, "stand")
+}
+
+if nstates == nstates.walk
+{
+    draw_text(x - 20, y - 35, "walk")
+}
+
+if nstates == nstates.air
+{
+    draw_text(x - 20, y - 35, "air")
+}
+
 </string>
           </argument>
         </arguments>
