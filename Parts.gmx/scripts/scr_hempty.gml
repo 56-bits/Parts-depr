@@ -4,5 +4,9 @@ if mouse_check_button(mb_left)
 {
     holding = holding.punch
 }
+if mouse_check_button(mb_right)
+{
+    holding = holding.gun
+}
 
 mask_index = spr_no_mask;
