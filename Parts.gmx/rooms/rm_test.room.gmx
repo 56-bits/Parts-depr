@@ -735,6 +735,10 @@
     <instance objName="obj_npc_test" x="288" y="464" name="inst_7B06D88A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_npc_test" x="336" y="464" name="inst_FF5CA3E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_npc_test" x="368" y="464" name="inst_D0A55DE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="80" y="480" name="door_001" locked="0" code="target_room = rm_test&#xA;target_door = door_000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="512" y="480" name="door_000" locked="0" code="target_room = rm_test&#xA;target_door = door_001&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="688" y="480" name="door_002" locked="0" code="target_room = rm_test_other&#xA;target_door = door_003&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="128" y="480" name="door_004" locked="0" code="target_room = rm_test_other&#xA;target_door = door_005&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

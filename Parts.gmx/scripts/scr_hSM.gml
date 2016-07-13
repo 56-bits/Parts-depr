@@ -11,6 +11,10 @@ switch (holding)
     case holding.knife :
         scr_hknife();
         break;
+                
+    case holding.knife_throw :
+        scr_hknife_throw();
+        break;
         
     case holding.gun :
         scr_hgun();

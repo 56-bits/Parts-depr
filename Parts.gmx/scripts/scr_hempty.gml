@@ -6,7 +6,7 @@ if mouse_check_button(mb_left)
 }
 if mouse_check_button(mb_right)
 {
-    holding = holding.gun
+    holding = holding.knife_throw
 }
 
 mask_index = spr_no_mask;
