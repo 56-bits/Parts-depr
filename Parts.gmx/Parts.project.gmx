@@ -58,14 +58,22 @@
     <scripts name="grp_player">
       <scripts name="grp_player_state_machine">
         <script>scripts\scr_pSM.gml</script>
-        <script>scripts\scr_pwalk.gml</script>
-        <script>scripts\scr_pstand.gml</script>
-        <script>scripts\scr_pair.gml</script>
+        <scripts name="grp_player_mode">
+          <script>scripts\scr_pinstepct.gml</script>
+          <script>scripts\scr_pfight.gml</script>
+          <script>scripts\scr_pbuild.gml</script>
+        </scripts>
+        <scripts name="grp_player_states">
+          <script>scripts\scr_pstand.gml</script>
+          <script>scripts\scr_pair.gml</script>
+          <script>scripts\scr_pwalk.gml</script>
+        </scripts>
       </scripts>
       <scripts name="grp_player_checks">
         <script>scripts\scr_pchecks.gml</script>
         <script>scripts\scr_pkeys.gml</script>
         <script>scripts\scr_facemouse.gml</script>
+        <script>scripts\scr_pmode.gml</script>
       </scripts>
       <scripts name="grp_hand_state_machine">
         <script>scripts\scr_hSM.gml</script>

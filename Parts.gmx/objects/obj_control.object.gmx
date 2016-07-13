@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_camera);
+            <string>instance_create(obj_player.x,obj_player.y,obj_camera);
 </string>
           </argument>
         </arguments>
