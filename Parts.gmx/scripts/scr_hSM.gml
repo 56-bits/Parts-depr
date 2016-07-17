@@ -1,23 +1,20 @@
-switch (holding)
+switch (obj_player.pmode)
 {
-    case holding.empty :
-        scr_hempty();
+    case pmode.inspect :
+        scr_hSM_inspect();
         break;
 
-    case holding.punch:
-        scr_hpunch();
+    case pmode.build:
+        //do nothing
         break;
         
-    case holding.knife :
-        scr_hknife();
-        break;
-                
-    case holding.knife_throw :
-        scr_hknife_throw();
-        break;
-        
-    case holding.gun :
-        scr_hgun();
+    case pmode.fight :
+        scr_hSM_fight();
         break;
 
+}
+
+if obj_player.mode_change
+{
+    holding = holding.empty;
 }

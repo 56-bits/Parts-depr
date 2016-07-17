@@ -57,17 +57,12 @@
     </scripts>
     <scripts name="grp_player">
       <scripts name="grp_player_state_machine">
-        <script>scripts\scr_pSM.gml</script>
-        <scripts name="grp_player_mode">
-          <script>scripts\scr_pinstepct.gml</script>
-          <script>scripts\scr_pfight.gml</script>
-          <script>scripts\scr_pbuild.gml</script>
-        </scripts>
         <scripts name="grp_player_states">
           <script>scripts\scr_pstand.gml</script>
           <script>scripts\scr_pair.gml</script>
           <script>scripts\scr_pwalk.gml</script>
         </scripts>
+        <script>scripts\scr_pSM.gml</script>
       </scripts>
       <scripts name="grp_player_checks">
         <script>scripts\scr_pchecks.gml</script>
@@ -75,15 +70,27 @@
         <script>scripts\scr_facemouse.gml</script>
         <script>scripts\scr_pmode.gml</script>
       </scripts>
-      <scripts name="grp_hand_state_machine">
-        <script>scripts\scr_hSM.gml</script>
-        <script>scripts\scr_hempty.gml</script>
-        <script>scripts\scr_hpunch.gml</script>
-        <script>scripts\scr_hknife.gml</script>
-        <script>scripts\scr_hknife_throw.gml</script>
-        <script>scripts\scr_hgun.gml</script>
-      </scripts>
       <script>scripts\scr_collisions.gml</script>
+      <scripts name="grp_hand_state_machine">
+        <scripts name="grp_hand_fight">
+          <script>scripts\scr_hSM_fight.gml</script>
+          <script>scripts\scr_hgun.gml</script>
+          <script>scripts\scr_hknife.gml</script>
+          <script>scripts\scr_hempty_fight.gml</script>
+          <script>scripts\scr_hpunch.gml</script>
+          <script>scripts\scr_hknife_throw.gml</script>
+        </scripts>
+        <scripts name="grp_hand_inspect">
+          <script>scripts\scr_hSM_inspect.gml</script>
+          <script>scripts\scr_hempty_inspect.gml</script>
+        </scripts>
+        <script>scripts\scr_hSM.gml</script>
+      </scripts>
+      <scripts name="grp_player_mode">
+        <script>scripts\scr_pinstepct.gml</script>
+        <script>scripts\scr_pfight.gml</script>
+        <script>scripts\scr_pbuild.gml</script>
+      </scripts>
     </scripts>
     <scripts name="grp_npc">
       <scripts name="grp_npc_state_machine">
