@@ -20,6 +20,10 @@ if mode_released && mode_change
             pmode = pmode.inspect //from fight to inspect
             break;
     
+        default:
+            break;
+
+    
     }
 
     mode_change = false

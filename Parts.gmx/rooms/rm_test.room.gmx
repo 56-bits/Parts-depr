@@ -739,6 +739,7 @@
     <instance objName="obj_door" x="512" y="480" name="door_000" locked="0" code="target_room = rm_test&#xA;target_door = door_001&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="688" y="480" name="door_002" locked="0" code="target_room = rm_test_other&#xA;target_door = door_003&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="128" y="480" name="door_004" locked="0" code="target_room = rm_test_other&#xA;target_door = door_005&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_npc_test" x="704" y="320" name="inst_F8CE168C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

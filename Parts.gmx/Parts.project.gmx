@@ -3,9 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions>
-    <extension index="0">extensions\Speech Bubble</extension>
-  </NewExtensions>
+  <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_door</sprite>
@@ -49,6 +47,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_collisions.gml</script>
     <scripts name="grp_spritesuff">
       <script>scripts\scr_sprite_idle.gml</script>
       <script>scripts\scr_sprite_walk.gml</script>
@@ -70,7 +69,6 @@
         <script>scripts\scr_facemouse.gml</script>
         <script>scripts\scr_pmode.gml</script>
       </scripts>
-      <script>scripts\scr_collisions.gml</script>
       <scripts name="grp_hand_state_machine">
         <scripts name="grp_hand_fight">
           <script>scripts\scr_hSM_fight.gml</script>
@@ -96,9 +94,19 @@
       <scripts name="grp_npc_state_machine">
         <script>scripts\scr_nSM.gml</script>
         <script>scripts\scr_nstand.gml</script>
-        <script>scripts\scr_nwalk.gml</script>
         <script>scripts\scr_nair.gml</script>
+        <script>scripts\scr_nwalk.gml</script>
       </scripts>
+      <scripts name="grp_npc_checks">
+        <script>scripts\scr_nchecks.gml</script>
+        <script>scripts\scr_fall_ahead.gml</script>
+        <script>scripts\scr_obstacle_passable.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="grp_camera">
+      <script>scripts\scr_cSM.gml</script>
+      <script>scripts\scr_cinspect.gml</script>
+      <script>scripts\scr_cfight.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

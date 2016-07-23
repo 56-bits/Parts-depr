@@ -12,6 +12,10 @@ switch (obj_player.pmode)
         scr_hSM_fight();
         break;
 
+    default:
+        break;
+
+
 }
 
 if obj_player.mode_change

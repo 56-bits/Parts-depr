@@ -12,4 +12,8 @@ switch (states)
         scr_pair();
         break;
 
+    default:
+        break;
+
+
 }
