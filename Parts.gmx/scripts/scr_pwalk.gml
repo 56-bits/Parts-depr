@@ -7,9 +7,15 @@ if !( moveing )
     states = states.stand;
 }
 
+//check for if in the air
+if !place_meeting(x, y + vspd + 1, par_collidable)
+{
+    states = states.air
+}
+
 // horizontal move code
 
-var move = mright + -mleft; //movement direction
+move = mright + -mleft; //movement direction
 
 hspd = move * wspd //put movement in hspd
 
@@ -30,6 +36,14 @@ if !scr_facemouse() && hspd < 0
 {
     hspd *= nfmspd;
 }
+show_debug_message(string(sign(hspd)));
+//auto stepping
+var astep_dist = scr_obstacle_steppable(sign(hspd))
+show_debug_message("astep: "+string(astep_dist));
+if astep_dist != 0
+{
+    vspd = -astep_dist * 4;
+}
 
 //verticle move code
 if place_meeting(x, y + 1, par_collidable)//only jump when on floor
@@ -37,19 +51,7 @@ if place_meeting(x, y + 1, par_collidable)//only jump when on floor
     vspd = jump * -jspd //do the jump
 }
 
-//check for if in the air
-if !place_meeting(x, y + vspd + 1, par_collidable)
-{
-    states = states.air
-}
-
-//auto stepping
-var astep_dist = scr_obstacle_steppable(move)
-if astep_dist != false
-{
-    jspd = -astep_dist;
-}
-
 //collisons and movement application
 scr_collisions();
+
 

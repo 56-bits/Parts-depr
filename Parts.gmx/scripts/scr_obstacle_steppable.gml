@@ -14,11 +14,11 @@ var temp_y = y;
 var max_y = 8;
 var i = 0;
 
-temp_x += argument0;
+temp_x -= argument0;
 
 for (i = 0; i < max_y; i ++)
 {
-    if place_meeting(temp_x, temp_y + i, par_collidable)
+    if !place_meeting(temp_x, temp_y - i, par_collidable)
     {
         return i;
     }
