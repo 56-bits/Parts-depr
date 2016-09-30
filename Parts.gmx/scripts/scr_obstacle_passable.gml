@@ -1,7 +1,7 @@
 
 ///scr_obstacle_passable(direction)
 
-//checks for obstacles that can be passed
+//checks for obstacles that can be jumped over
 
 dir = argument0
 

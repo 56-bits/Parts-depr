@@ -54,61 +54,66 @@
       <script>scripts\scr_draw_pself.gml</script>
       <script>scripts\scr_draw_self.gml</script>
     </scripts>
-    <scripts name="grp_player">
-      <scripts name="grp_state_machine">
-        <scripts name="grp_states">
-          <script>scripts\scr_pstand.gml</script>
-          <script>scripts\scr_pair.gml</script>
-          <script>scripts\scr_pwalk.gml</script>
-        </scripts>
-        <script>scripts\scr_pSM.gml</script>
-      </scripts>
-      <scripts name="grp_checks">
-        <script>scripts\scr_pchecks.gml</script>
-        <script>scripts\scr_pkeys.gml</script>
-        <script>scripts\scr_facemouse.gml</script>
-        <script>scripts\scr_pmode.gml</script>
-      </scripts>
-      <scripts name="grp_hand">
-        <scripts name="grp_fight">
-          <script>scripts\scr_hSM_fight.gml</script>
-          <script>scripts\scr_hgun.gml</script>
-          <script>scripts\scr_hknife.gml</script>
-          <script>scripts\scr_hempty_fight.gml</script>
-          <script>scripts\scr_hpunch.gml</script>
-          <script>scripts\scr_hknife_throw.gml</script>
-        </scripts>
-        <scripts name="grp_nspect">
-          <script>scripts\scr_hSM_inspect.gml</script>
-          <script>scripts\scr_hempty_inspect.gml</script>
-        </scripts>
-        <script>scripts\scr_hSM.gml</script>
-      </scripts>
-      <scripts name="grp_mode">
-        <script>scripts\scr_pinstepct.gml</script>
-        <script>scripts\scr_pfight.gml</script>
-        <script>scripts\scr_pbuild.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="grp_npc">
-      <scripts name="grp_state_machine">
-        <script>scripts\scr_nSM.gml</script>
-        <script>scripts\scr_nstand.gml</script>
-        <script>scripts\scr_nair.gml</script>
-        <script>scripts\scr_nwalk.gml</script>
-      </scripts>
-      <scripts name="grp_checks">
-        <script>scripts\scr_nchecks.gml</script>
-        <scripts name="grp_environment">
-          <script>scripts\scr_fall_ahead.gml</script>
-          <script>scripts\scr_obstacle_passable.gml</script>
-        </scripts>
-      </scripts>
-    </scripts>
     <scripts name="grp_camera">
       <script>scripts\scr_cSM.gml</script>
       <script>scripts\scr_cinspect.gml</script>
       <script>scripts\scr_cfight.gml</script>
+    </scripts>
+    <scripts name="grp_people">
+      <scripts name="grp_npc">
+        <scripts name="grp_state_machine">
+          <script>scripts\scr_nSM.gml</script>
+          <script>scripts\scr_nstand.gml</script>
+          <script>scripts\scr_nair.gml</script>
+          <script>scripts\scr_nwalk.gml</script>
+        </scripts>
+        <scripts name="grp_checks">
+          <script>scripts\scr_nchecks.gml</script>
+          <scripts name="grp_environment">
+            <script>scripts\scr_fall_ahead.gml</script>
+          </scripts>
+        </scripts>
+      </scripts>
+      <scripts name="grp_player">
+        <scripts name="grp_state_machine">
+          <scripts name="grp_states">
+            <script>scripts\scr_pstand.gml</script>
+            <script>scripts\scr_pair.gml</script>
+            <script>scripts\scr_pwalk.gml</script>
+          </scripts>
+          <script>scripts\scr_pSM.gml</script>
+        </scripts>
+        <scripts name="grp_checks">
+          <script>scripts\scr_pchecks.gml</script>
+          <script>scripts\scr_pkeys.gml</script>
+          <script>scripts\scr_facemouse.gml</script>
+          <script>scripts\scr_pmode.gml</script>
+        </scripts>
+        <scripts name="grp_hand">
+          <scripts name="grp_fight">
+            <script>scripts\scr_hSM_fight.gml</script>
+            <script>scripts\scr_hgun.gml</script>
+            <script>scripts\scr_hknife.gml</script>
+            <script>scripts\scr_hempty_fight.gml</script>
+            <script>scripts\scr_hpunch.gml</script>
+            <script>scripts\scr_hknife_throw.gml</script>
+          </scripts>
+          <scripts name="grp_nspect">
+            <script>scripts\scr_hSM_inspect.gml</script>
+            <script>scripts\scr_hempty_inspect.gml</script>
+          </scripts>
+          <script>scripts\scr_hSM.gml</script>
+        </scripts>
+        <scripts name="grp_mode">
+          <script>scripts\scr_pinstepct.gml</script>
+          <script>scripts\scr_pfight.gml</script>
+          <script>scripts\scr_pbuild.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="grp_shared">
+        <script>scripts\scr_obstacle_passable.gml</script>
+        <script>scripts\scr_obstacle_steppable.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <fonts name="fonts">

@@ -11,7 +11,7 @@ if !( moveing )
 
 var move = mright + -mleft; //movement direction
 
-hspd = move * wspd //* (shift * rspd + 1) * fmspd; //put movement in hspd // also applies the run stuff //mechanic for mouse facing
+hspd = move * wspd //put movement in hspd
 
 //speed increase for running
 if shift
