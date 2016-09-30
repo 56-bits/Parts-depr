@@ -6,8 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_door</sprite>
-    <sprite>sprites\spr_ground</sprite>
     <sprites name="grp_character">
       <sprites name="grp_body">
         <sprites name="grp_idle">
@@ -40,6 +38,14 @@
     <sprites name="grp_items">
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_knife</sprite>
+    </sprites>
+    <sprites name="grp_environment">
+      <sprite>sprites\spr_door</sprite>
+      <sprites name="grp_ground">
+        <sprite>sprites\spr_ground</sprite>
+        <sprite>sprites\spr_ground_S</sprite>
+        <sprite>sprites\spr_ground_XS</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -129,7 +135,11 @@
     <objects name="grp_world">
       <object>objects\obj_door</object>
       <object>objects\par_collidable</object>
-      <object>objects\obj_ground</object>
+      <objects name="grp_ground">
+        <object>objects\obj_ground</object>
+        <object>objects\obj_ground_S</object>
+        <object>objects\obj_ground_XS</object>
+      </objects>
     </objects>
     <objects name="grp_player">
       <object>objects\obj_player</object>

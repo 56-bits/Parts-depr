@@ -1,4 +1,5 @@
-///scr_obstacle_passable(direction)
+///scr_obstacle_steppable(direction)
+
 /*
 direction:
     1 = right
@@ -10,7 +11,7 @@ otherwise returns false
 
 var temp_x = x;
 var temp_y = y;
-var max_y = 4;
+var max_y = 8;
 var i = 0;
 
 temp_x += argument0;

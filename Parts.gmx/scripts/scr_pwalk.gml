@@ -37,10 +37,17 @@ if place_meeting(x, y + 1, par_collidable)//only jump when on floor
     vspd = jump * -jspd //do the jump
 }
 
-//chack for if in the air
+//check for if in the air
 if !place_meeting(x, y + vspd + 1, par_collidable)
 {
     states = states.air
+}
+
+//auto stepping
+var astep_dist = scr_obstacle_steppable(move)
+if astep_dist != false
+{
+    jspd = -astep_dist;
 }
 
 //collisons and movement application
