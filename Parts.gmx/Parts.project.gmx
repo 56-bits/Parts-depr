@@ -9,22 +9,22 @@
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_ground</sprite>
     <sprites name="grp_character">
-      <sprites name="grp_character_body">
-        <sprites name="grp_character_body_idle">
+      <sprites name="grp_body">
+        <sprites name="grp_idle">
           <sprite>sprites\spr_character_body_0_idle</sprite>
           <sprite>sprites\spr_character_body_1_idle</sprite>
         </sprites>
-        <sprites name="grp_character_body_walk">
+        <sprites name="grp_walk">
           <sprite>sprites\spr_character_body_0_walk</sprite>
           <sprite>sprites\spr_character_body_1_walk</sprite>
         </sprites>
       </sprites>
-      <sprites name="grp_character_shirt">
-        <sprites name="grp_character_shirt_idle">
+      <sprites name="grp_shirt">
+        <sprites name="grp_idle">
           <sprite>sprites\spr_character_shirt_0_idle</sprite>
           <sprite>sprites\spr_character_shirt_1_idle</sprite>
         </sprites>
-        <sprites name="grp_character_shirt_walk">
+        <sprites name="grp_walk">
           <sprite>sprites\spr_character_shirt_0_walk</sprite>
           <sprite>sprites\spr_character_shirt_1_walk</sprite>
         </sprites>
@@ -55,22 +55,22 @@
       <script>scripts\scr_draw_self.gml</script>
     </scripts>
     <scripts name="grp_player">
-      <scripts name="grp_player_state_machine">
-        <scripts name="grp_player_states">
+      <scripts name="grp_state_machine">
+        <scripts name="grp_states">
           <script>scripts\scr_pstand.gml</script>
           <script>scripts\scr_pair.gml</script>
           <script>scripts\scr_pwalk.gml</script>
         </scripts>
         <script>scripts\scr_pSM.gml</script>
       </scripts>
-      <scripts name="grp_player_checks">
+      <scripts name="grp_checks">
         <script>scripts\scr_pchecks.gml</script>
         <script>scripts\scr_pkeys.gml</script>
         <script>scripts\scr_facemouse.gml</script>
         <script>scripts\scr_pmode.gml</script>
       </scripts>
-      <scripts name="grp_hand_state_machine">
-        <scripts name="grp_hand_fight">
+      <scripts name="grp_hand">
+        <scripts name="grp_fight">
           <script>scripts\scr_hSM_fight.gml</script>
           <script>scripts\scr_hgun.gml</script>
           <script>scripts\scr_hknife.gml</script>
@@ -78,29 +78,31 @@
           <script>scripts\scr_hpunch.gml</script>
           <script>scripts\scr_hknife_throw.gml</script>
         </scripts>
-        <scripts name="grp_hand_inspect">
+        <scripts name="grp_nspect">
           <script>scripts\scr_hSM_inspect.gml</script>
           <script>scripts\scr_hempty_inspect.gml</script>
         </scripts>
         <script>scripts\scr_hSM.gml</script>
       </scripts>
-      <scripts name="grp_player_mode">
+      <scripts name="grp_mode">
         <script>scripts\scr_pinstepct.gml</script>
         <script>scripts\scr_pfight.gml</script>
         <script>scripts\scr_pbuild.gml</script>
       </scripts>
     </scripts>
     <scripts name="grp_npc">
-      <scripts name="grp_npc_state_machine">
+      <scripts name="grp_state_machine">
         <script>scripts\scr_nSM.gml</script>
         <script>scripts\scr_nstand.gml</script>
         <script>scripts\scr_nair.gml</script>
         <script>scripts\scr_nwalk.gml</script>
       </scripts>
-      <scripts name="grp_npc_checks">
+      <scripts name="grp_checks">
         <script>scripts\scr_nchecks.gml</script>
-        <script>scripts\scr_fall_ahead.gml</script>
-        <script>scripts\scr_obstacle_passable.gml</script>
+        <scripts name="grp_environment">
+          <script>scripts\scr_fall_ahead.gml</script>
+          <script>scripts\scr_obstacle_passable.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="grp_camera">
