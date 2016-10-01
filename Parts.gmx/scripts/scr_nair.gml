@@ -9,5 +9,11 @@ if vspd < tvel
     vspd += grav  //* (mdown * fspd + 1); //allow accelleration to terminal velocity // accelerate w/ down key
 }
 
-scr_collisions(); //collisons and move ant application
+if scr_obstacle_passable(move)
+{
+    vspd += -jbst;
+}
 
+hspd = move * wspd;
+
+scr_collisions(); //collisons and move application

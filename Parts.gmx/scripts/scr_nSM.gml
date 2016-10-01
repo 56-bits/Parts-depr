@@ -12,4 +12,8 @@ switch (nstates)
         scr_nair();
         break;
 
+    default:
+        break;
+
+
 }

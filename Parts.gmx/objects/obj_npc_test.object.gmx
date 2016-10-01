@@ -57,7 +57,7 @@ move = 1; //movement direction
 
 //jumping
 jspd = 4.5; //standard jump
-//jbst = .2; //variable jump height
+jbst = .2; //variable jump height
 
 //walking
 wspd = 3; //normal walk speed
@@ -95,30 +95,7 @@ rspd = 1; //percent increase
           <argument>
             <kind>1</kind>
             <string>scr_nSM();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>body = irandom(1);
-shirt = irandom(1);
+scr_nchecks();
 </string>
           </argument>
         </arguments>
@@ -141,8 +118,7 @@ shirt = irandom(1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_sprite_idle();
-scr_draw_self();
+            <string>scr_draw_self();
 
 
 if nstates == nstates.stand
@@ -160,6 +136,30 @@ if nstates == nstates.air
     draw_text(x - 20, y - 35, "air")
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>body = irandom(1);
+shirt = irandom(1);
 </string>
           </argument>
         </arguments>

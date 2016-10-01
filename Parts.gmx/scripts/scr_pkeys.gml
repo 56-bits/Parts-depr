@@ -12,3 +12,12 @@ shift = keyboard_check(vk_lshift);
 //check for any movement
 moveing = mright || mleft || jump;
 
+//other action type keys
+interact = keyboard_check_pressed(ord("E"));
+
+//mode switching key
+mode_pressed = keyboard_check_pressed(ord("Q"));
+mode_released = keyboard_check_released(ord("Q"));
+mode_held = keyboard_check(ord("Q"));
+
+

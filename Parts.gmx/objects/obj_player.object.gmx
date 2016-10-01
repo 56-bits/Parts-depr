@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>spr_character_body_0_idle</maskName>
   <events>
@@ -48,6 +48,19 @@ enum states
 
 states = states.stand //staring state
 
+//mode machine
+enum pmode
+{
+    inspect,
+    fight,
+    build
+}
+
+pmode = pmode.inspect; //inspect state
+
+mode_change = false;
+fight_delay = 10;
+
 //-movement variables
 vspd = 0; //verticle speed storage
 hspd = 0; //horizontal speed storage
@@ -71,6 +84,61 @@ rspd = 1; //percent increase
 //face mouse speed
 nfmspd = .7; //percentage of speed when moving away from mouse
 
+//door stuffs
+target_door = noone;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if mode_held
+{
+    pmode = pmode.fight;
+    mode_change = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x = target_door.x
+y = target_door.y
+target_door = noone;
 </string>
           </argument>
         </arguments>
@@ -147,7 +215,7 @@ shirt = irandom(1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>//dislplay mode
 if states == states.stand
 {
     draw_text(20,20, "stand")
@@ -161,6 +229,22 @@ if states == states.walk
 if states == states.air
 {
     draw_text(20,20, "air")
+}
+
+//dislpay mode
+if pmode == pmode.inspect
+{
+    draw_text(20,40, "inspect")
+}
+
+if pmode == pmode.build
+{
+    draw_text(20,40, "build")
+}
+
+if pmode == pmode.fight
+{
+    draw_text(20,40, "fight")
 }
 
 </string>

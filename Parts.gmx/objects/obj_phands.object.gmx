@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-1</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -30,6 +30,7 @@
     empty,
     punch,
     knife,
+    knife_throw,
     gun
 }
 
@@ -88,6 +89,53 @@ animation_end = false;
             <kind>1</kind>
             <string>if sprite_index != spr_character_hand_0_idle 
     animation_end = true
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//dislpay state
+if holding == holding.empty
+{
+    draw_text(20,60, "empty")
+}
+
+if holding == holding.punch
+{
+    draw_text(20,60, "punch")
+}
+
+if holding == holding.knife
+{
+    draw_text(20,60, "knife")
+}
+
+if holding == holding.knife_throw
+{
+    draw_text(20,60, "knife throw")
+}
+
+if holding == holding.gun
+{
+    draw_text(20,60, "gun")
+}
 </string>
           </argument>
         </arguments>

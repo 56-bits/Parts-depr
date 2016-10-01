@@ -6,24 +6,23 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_ground</sprite>
     <sprites name="grp_character">
-      <sprites name="grp_character_body">
-        <sprites name="grp_character_body_idle">
+      <sprites name="grp_body">
+        <sprites name="grp_idle">
           <sprite>sprites\spr_character_body_0_idle</sprite>
           <sprite>sprites\spr_character_body_1_idle</sprite>
         </sprites>
-        <sprites name="grp_character_body_walk">
+        <sprites name="grp_walk">
           <sprite>sprites\spr_character_body_0_walk</sprite>
           <sprite>sprites\spr_character_body_1_walk</sprite>
         </sprites>
       </sprites>
-      <sprites name="grp_character_shirt">
-        <sprites name="grp_character_shirt_idle">
+      <sprites name="grp_shirt">
+        <sprites name="grp_idle">
           <sprite>sprites\spr_character_shirt_0_idle</sprite>
           <sprite>sprites\spr_character_shirt_1_idle</sprite>
         </sprites>
-        <sprites name="grp_character_shirt_walk">
+        <sprites name="grp_walk">
           <sprite>sprites\spr_character_shirt_0_walk</sprite>
           <sprite>sprites\spr_character_shirt_1_walk</sprite>
         </sprites>
@@ -35,66 +34,125 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_no_mask</sprite>
-    <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_talkable</sprite>
+    <sprites name="grp_items">
+      <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_knife</sprite>
+    </sprites>
+    <sprites name="grp_environment">
+      <sprite>sprites\spr_door</sprite>
+      <sprites name="grp_ground">
+        <sprite>sprites\spr_ground</sprite>
+        <sprite>sprites\spr_ground_S</sprite>
+        <sprite>sprites\spr_ground_XS</sprite>
+      </sprites>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_collisions.gml</script>
     <scripts name="grp_spritesuff">
       <script>scripts\scr_sprite_idle.gml</script>
       <script>scripts\scr_sprite_walk.gml</script>
       <script>scripts\scr_draw_pself.gml</script>
       <script>scripts\scr_draw_self.gml</script>
     </scripts>
-    <scripts name="grp_player">
-      <scripts name="grp_player_state_machine">
-        <script>scripts\scr_pSM.gml</script>
-        <script>scripts\scr_pwalk.gml</script>
-        <script>scripts\scr_pstand.gml</script>
-        <script>scripts\scr_pair.gml</script>
-      </scripts>
-      <scripts name="grp_player_checks">
-        <script>scripts\scr_pchecks.gml</script>
-        <script>scripts\scr_pkeys.gml</script>
-        <script>scripts\scr_facemouse.gml</script>
-      </scripts>
-      <scripts name="grp_hand_state_machine">
-        <script>scripts\scr_hSM.gml</script>
-        <script>scripts\scr_hempty.gml</script>
-        <script>scripts\scr_hpunch.gml</script>
-        <script>scripts\scr_hknife.gml</script>
-        <script>scripts\scr_hgun.gml</script>
-      </scripts>
-      <script>scripts\scr_collisions.gml</script>
+    <scripts name="grp_camera">
+      <script>scripts\scr_cSM.gml</script>
+      <script>scripts\scr_cinspect.gml</script>
+      <script>scripts\scr_cfight.gml</script>
     </scripts>
-    <scripts name="grp_npc">
-      <scripts name="grp_npc_state_machine">
-        <script>scripts\scr_nSM.gml</script>
-        <script>scripts\scr_nstand.gml</script>
-        <script>scripts\scr_nwalk.gml</script>
-        <script>scripts\scr_nair.gml</script>
+    <scripts name="grp_people">
+      <scripts name="grp_npc">
+        <scripts name="grp_state_machine">
+          <script>scripts\scr_nSM.gml</script>
+          <script>scripts\scr_nstand.gml</script>
+          <script>scripts\scr_nair.gml</script>
+          <script>scripts\scr_nwalk.gml</script>
+        </scripts>
+        <scripts name="grp_checks">
+          <script>scripts\scr_nchecks.gml</script>
+          <scripts name="grp_environment">
+            <script>scripts\scr_fall_ahead.gml</script>
+          </scripts>
+        </scripts>
+      </scripts>
+      <scripts name="grp_player">
+        <scripts name="grp_state_machine">
+          <scripts name="grp_states">
+            <script>scripts\scr_pstand.gml</script>
+            <script>scripts\scr_pair.gml</script>
+            <script>scripts\scr_pwalk.gml</script>
+          </scripts>
+          <script>scripts\scr_pSM.gml</script>
+        </scripts>
+        <scripts name="grp_checks">
+          <script>scripts\scr_pchecks.gml</script>
+          <script>scripts\scr_pkeys.gml</script>
+          <script>scripts\scr_facemouse.gml</script>
+          <script>scripts\scr_pmode.gml</script>
+        </scripts>
+        <scripts name="grp_hand">
+          <scripts name="grp_fight">
+            <script>scripts\scr_hSM_fight.gml</script>
+            <script>scripts\scr_hgun.gml</script>
+            <script>scripts\scr_hknife.gml</script>
+            <script>scripts\scr_hempty_fight.gml</script>
+            <script>scripts\scr_hpunch.gml</script>
+            <script>scripts\scr_hknife_throw.gml</script>
+          </scripts>
+          <scripts name="grp_nspect">
+            <script>scripts\scr_hSM_inspect.gml</script>
+            <script>scripts\scr_hempty_inspect.gml</script>
+          </scripts>
+          <script>scripts\scr_hSM.gml</script>
+        </scripts>
+        <scripts name="grp_mode">
+          <script>scripts\scr_pinstepct.gml</script>
+          <script>scripts\scr_pfight.gml</script>
+          <script>scripts\scr_pbuild.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="grp_shared">
+        <script>scripts\scr_obstacle_passable.gml</script>
+        <script>scripts\scr_obstacle_steppable.gml</script>
       </scripts>
     </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt</font>
+    <font>fonts\fnt_messagebox</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_phands</object>
     <object>objects\obj_npc_test</object>
     <objects name="grp_control">
       <object>objects\obj_camera</object>
       <object>objects\obj_control</object>
     </objects>
     <objects name="grp_world">
+      <object>objects\obj_door</object>
       <object>objects\par_collidable</object>
-      <object>objects\obj_ground</object>
+      <objects name="grp_ground">
+        <object>objects\obj_ground</object>
+        <object>objects\obj_ground_S</object>
+        <object>objects\obj_ground_XS</object>
+      </objects>
     </objects>
-    <object>objects\obj_bullet</object>
+    <objects name="grp_player">
+      <object>objects\obj_player</object>
+      <object>objects\obj_phands</object>
+    </objects>
+    <objects name="grp_items">
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_knife</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
+    <room>rooms\rm_test_other</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
