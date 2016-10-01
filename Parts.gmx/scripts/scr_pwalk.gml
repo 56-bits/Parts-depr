@@ -37,18 +37,21 @@ if !scr_facemouse() && hspd < 0
     hspd *= nfmspd;
 }
 show_debug_message(string(sign(hspd)));
-//auto stepping
-var astep_dist = scr_obstacle_steppable(sign(hspd))
-show_debug_message("astep: "+string(astep_dist));
-if astep_dist != 0
-{
-    vspd = -astep_dist * 4;
-}
 
 //verticle move code
 if place_meeting(x, y + 1, par_collidable)//only jump when on floor
 {
     vspd = jump * -jspd //do the jump
+}
+
+//auto stepping
+var astep_dist = scr_obstacle_steppable(sign(hspd))
+show_debug_message("astep: "+string(astep_dist));
+if astep_dist != 0
+{
+    //vspd = -astep_dist / 1.5;
+    x += sign(hspd);
+    y -= astep_dist
 }
 
 //collisons and movement application

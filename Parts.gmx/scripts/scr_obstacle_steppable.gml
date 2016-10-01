@@ -11,10 +11,10 @@ otherwise returns false
 
 var temp_x = x;
 var temp_y = y;
-var max_y = 8;
+var max_y = 9;
 var i = 0;
 
-temp_x -= argument0;
+temp_x += argument0;
 
 for (i = 0; i < max_y; i ++)
 {
