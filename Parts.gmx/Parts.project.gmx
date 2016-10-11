@@ -121,6 +121,12 @@
         <script>scripts\scr_obstacle_steppable.gml</script>
       </scripts>
     </scripts>
+    <scripts name="grp_gui">
+      <scripts name="grp_interaction">
+        <script>scripts\scr_int_add.gml</script>
+        <script>scripts\scr_int_init.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt</font>
@@ -149,6 +155,7 @@
       <object>objects\obj_bullet</object>
       <object>objects\obj_knife</object>
     </objects>
+    <object>objects\obj_tetser</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
