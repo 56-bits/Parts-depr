@@ -125,6 +125,12 @@
       <scripts name="grp_interaction">
         <script>scripts\scr_int_add.gml</script>
         <script>scripts\scr_int_init.gml</script>
+        <script>scripts\scr_int_disp.gml</script>
+        <script>scripts\scr_draw_bubble.gml</script>
+      </scripts>
+      <scripts name="grp_mouse">
+        <script>scripts\scr_mouse_hover_rect.gml</script>
+        <script>scripts\scr_mouse_hover_circle.gml</script>
       </scripts>
     </scripts>
   </scripts>
