@@ -50,10 +50,9 @@ scr_int_add("option_1", noone, 0, noone)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if scr_mouse_hover_rect(x - sprite_width/2, y - sprite_height/2, sprite_width, sprite_height)
-{
-    scr_int_disp(20, 0, 180, 4, true);
-}
+            <string>
+scr_int_disp(20, 0, 180, 4, true);
+
 draw_self();
 
 </string>

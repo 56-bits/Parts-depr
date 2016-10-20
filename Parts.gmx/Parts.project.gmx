@@ -125,6 +125,7 @@
       <scripts name="grp_interaction">
         <script>scripts\scr_int_add.gml</script>
         <script>scripts\scr_int_init.gml</script>
+        <script>scripts\scr_int_draw.gml</script>
         <script>scripts\scr_int_disp.gml</script>
         <script>scripts\scr_draw_bubble.gml</script>
       </scripts>
