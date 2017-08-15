@@ -752,6 +752,7 @@
     <instance objName="obj_ground_XS" x="492" y="494" name="inst_897DC239" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ground_XS" x="488" y="490" name="inst_885E935F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ground_XS" x="484" y="486" name="inst_AAD8CDF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tetser" x="420" y="468" name="inst_3A796109" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
